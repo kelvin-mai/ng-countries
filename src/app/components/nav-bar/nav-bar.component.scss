@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+span {
+  font-size: 14px;
+}
+
+@media (min-width: 376px) {
+  nav {
+    padding: 1.75rem 2rem;
+  }
+}
+
+:host-context(.light) nav {
+  background-color: var(--l-element);
+}
+
+:host-context(.dark) nav {
+  background-color: var(--d-element);
+}

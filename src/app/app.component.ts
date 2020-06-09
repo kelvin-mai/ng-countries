@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiService } from './services/api.service';
@@ -8,6 +8,7 @@ import { ThemeService, Theme } from './services/theme.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
   theme: Observable<Theme>;
@@ -19,10 +20,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // this.apiService.getAllCountries().subscribe((res) => console.log(res));
-    this.theme = this.themeService.mode;
-  }
-
-  toggleTheme() {
-    this.themeService.toggleMode();
+    this.theme = this.themeService.mode$;
   }
 }
