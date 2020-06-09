@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --d-bg: hsl(207, 26%, 17%);
+  --d-element: hsl(209, 23%, 22%);
+  --d-text: var(--white);
+
+  --l-bg: hsl(0, 0%, 98%);
+  --l-element: var(--white);
+  --l-text: hsl(200, 15%, 8%);
+  --l-input: hsl(0, 0%, 52%);
+}
+
+@mixin breakpoint {
+  @media (min-width: 376px) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans' sans-serif;
+}
