@@ -2,20 +2,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
-span {
-  font-size: 14px;
+div {
+  font-weight: 600;
 }
 
 @media (min-width: 376px) {
   nav {
-    padding: 1.75rem 2rem;
+    padding: 1.75rem 5rem;
   }
 }
 
