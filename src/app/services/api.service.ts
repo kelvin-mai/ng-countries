@@ -20,4 +20,11 @@ export class ApiService {
       .get<Country[]>(`${this.api}/name/${name}`)
       .pipe(map(([res]) => res));
   }
+
+  getCountriesByCodes(codes: string[]) {
+    console.log(`${this.api}/alhpa?codes=${codes.join(';')}`);
+    return this.http.get<Country[]>(
+      `${this.api}/alpha?codes=${codes.join(';')}`
+    );
+  }
 }

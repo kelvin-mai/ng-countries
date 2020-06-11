@@ -1,0 +1,32 @@
+.country {
+  padding: 1rem;
+
+  @media (min-width: 376px) {
+    padding: 5rem;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    padding-top: 2rem;
+  }
+  p {
+    padding: 0.5rem 0;
+  }
+
+  &-detail {
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 376px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-section {
+    padding: 1rem 0;
+  }
+}
