@@ -1,5 +1,5 @@
 <div *ngIf="country$ | async; let country" class="country">
-  <button [routerLink]="'/'">
+  <button class="button" [routerLink]="'/'">
     <span class="fa fa-arrow-left"></span>
     Back
   </button>
@@ -47,10 +47,17 @@
           </p>
         </div>
       </div>
-      <div>
+      <div class="border-countries">
         <p><strong>Border Countries:</strong></p>
-        <div *ngIf="borderCountries$ | async; let borderCountries">
-          <div *ngFor="let borderCountry of borderCountries">
+        <div
+          *ngIf="borderCountries$ | async; let borderCountries"
+          class="border-countries-buttons"
+        >
+          <div
+            *ngFor="let borderCountry of borderCountries"
+            class="button"
+            [routerLink]="'/' + borderCountry.name"
+          >
             {{ borderCountry.name }}
           </div>
         </div>

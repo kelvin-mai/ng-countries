@@ -1,6 +1,5 @@
 .country {
   padding: 1rem;
-
   @media (min-width: 376px) {
     padding: 5rem;
   }
@@ -9,12 +8,32 @@
   }
   h3 {
     padding-top: 2rem;
+    @media (min-width: 376px) {
+      font-size: 1.5rem;
+    }
+  }
+  button {
+    padding: 0.5rem 2rem;
+    margin-bottom: 4rem;
   }
   p {
     padding: 0.5rem 0;
   }
 
+  &-layout {
+    @media (min-width: 376px) {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 40%;
+      }
+    }
+  }
+
   &-detail {
+    @media (min-width: 376px) {
+      width: 50%;
+    }
   }
 
   &-info {
@@ -29,4 +48,37 @@
   &-section {
     padding: 1rem 0;
   }
+
+  .border-countries {
+    margin-bottom: 4rem;
+
+    &-buttons {
+      display: grid;
+      column-gap: 0.5rem;
+      row-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 2rem;
+
+      .button {
+        text-align: center;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+.button {
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+:host-context(.dark) .button {
+  background-color: var(--d-element);
+  color: var(--d-text);
+}
+
+:host-context(.light) .button {
+  background-color: var(--l-element);
+  color: var(--l-text);
 }
