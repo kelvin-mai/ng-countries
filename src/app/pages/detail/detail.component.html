@@ -1,5 +1,5 @@
 <div *ngIf="country$ | async; let country" class="country">
-  <button class="button" [routerLink]="'/'">
+  <button class="button shadow" [routerLink]="'/'">
     <span class="fa fa-arrow-left"></span>
     Back
   </button>
@@ -55,7 +55,7 @@
         >
           <div
             *ngFor="let borderCountry of borderCountries"
-            class="button"
+            class="button shadow"
             [routerLink]="'/' + borderCountry.name"
           >
             {{ borderCountry.name }}

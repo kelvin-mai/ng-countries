@@ -1,0 +1,39 @@
+.country-card {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  font-size: 15px;
+
+  h2 {
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    padding: 0.25rem 0;
+  }
+
+  &-img {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 200px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-info {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+}
+
+:host-context(.light) .country-card {
+  background-color: var(--l-element);
+}
+
+:host-context(.dark) .country-card {
+  background-color: var(--d-element);
+}

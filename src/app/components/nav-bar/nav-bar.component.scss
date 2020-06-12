@@ -3,18 +3,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem;
-}
+  h2 {
+    font-size: 20px;
+  }
 
-h2 {
-  font-size: 20px;
-}
+  div {
+    font-weight: 600;
+  }
 
-div {
-  font-weight: 600;
-}
-
-@media (min-width: 376px) {
-  nav {
+  @media (min-width: 376px) {
     padding: 1.75rem 5rem;
   }
 }
