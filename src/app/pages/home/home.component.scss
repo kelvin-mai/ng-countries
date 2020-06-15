@@ -9,3 +9,58 @@
     column-gap: 1rem;
   }
 }
+
+.country-filters {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 376px) {
+    margin: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  app-dropdown {
+    width: 60%;
+    @media (min-width: 376px) {
+      width: 25%;
+    }
+  }
+}
+
+.search-filter {
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 1rem;
+  @media (min-width: 376px) {
+    width: 33%;
+  }
+  span {
+    font-size: 1rem;
+    padding-right: 0.5rem;
+  }
+  input {
+    font-size: 1rem;
+    border: none;
+    background-color: inherit;
+  }
+}
+
+:host-context(.light) {
+  .search-filter {
+    background-color: var(--l-element);
+    color: var(--l-input);
+    input::placeholder {
+      color: var(--l-input);
+    }
+  }
+}
+
+:host-context(.dark) {
+  .search-filter {
+    background-color: var(--d-element);
+    color: var(--d-text);
+    input::placeholder {
+      color: var(--d-text);
+    }
+  }
+}

@@ -17,10 +17,10 @@
     overflow: hidden;
     position: relative;
     img {
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
-      height: 200px;
       transform: translate(-50%, -50%);
     }
   }
