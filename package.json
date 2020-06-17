@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && yarn netlify:redirect",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "prettier --write \"src/**/*.{html,ts,scss}\""
+    "format": "prettier --write \"src/**/*.{html,ts,scss}\"",
+    "netlify:redirect": "echo '/*    /index.html    200' >> dist/ng-countries/_redirects "
   },
   "private": true,
   "dependencies": {
